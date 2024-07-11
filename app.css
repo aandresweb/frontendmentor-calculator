@@ -1,0 +1,246 @@
+:root {
+  /* Theme 1 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-background);
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 32px;
+}
+
+body.first-theme {
+  --text: #fff;
+  --main-background: hsl(222, 26%, 31%);
+  --switcher-background: hsl(223, 31%, 20%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+  --screen-color: #fff;
+  --key-background: hsl(225, 21%, 49%);
+  --key-color: hsl(222, 26%, 31%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --selector-background: hsl(6, 63%, 50%);
+  --selector-hover-background: hsl(6, 75%, 60%);
+  --key-background-secondary: hsl(6, 63%, 50%);
+  --key-shadow-secondary: hsl(6, 70%, 34%);
+  --key-background-third: hsl(30, 25%, 89%);
+  --key-shadow-third: hsl(28, 16%, 65%);
+  --key-hover-background: hsl(0, 0%, 100%);
+  --key-hover-background-secondary: hsl(225, 29%, 66%);
+  --key-hover-background-third: hsl(6, 60%, 58%);
+}
+
+body.second-theme {
+  --text: hsl(60, 10%, 19%);
+  --main-background: hsl(0, 0%, 90%);
+  --switcher-background: hsl(0, 5%, 81%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+  --screen-color: hsl(60, 10%, 19%);
+  --key-background: hsl(185, 42%, 37%);
+  --key-color: hsl(60, 10%, 19%);
+  --key-shadow: hsl(0, 0%, 47%); /** Verificar **/
+  --selector-background: hsl(25, 98%, 40%);
+  --selector-hover-background: hsl(25, 98%, 50%);
+  --key-background-secondary: hsl(25, 98%, 40%);
+  --key-shadow-secondary: hsl(25, 99%, 27%);
+  --key-background-third: hsl(45, 7%, 89%);
+  --key-shadow-third: hsl(35, 11%, 61%);
+  --key-hover-background-secondary: hsl(185, 41%, 49%);
+  --key-hover-background-third: hsl(25, 98%, 50%);
+}
+
+body.third-theme {
+  --text: hsl(52, 100%, 62%);
+  --main-background: hsl(268, 75%, 9%);
+  --switcher-background: hsl(268, 71%, 12%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+  --screen-color: hsl(52, 100%, 62%);
+  --key-background: hsl(281, 89%, 26%);
+  --key-color: hsl(52, 100%, 62%);
+  --key-shadow: hsl(285, 91%, 52%); /** Verificar **/
+  --selector-background: hsl(176, 100%, 44%);
+  --selector-hover-background: hsl(177, 92%, 70%);
+  --key-background-secondary: hsl(176, 100%, 44%);
+  --key-shadow-secondary: hsl(177, 92%, 70%);
+  --key-background-third: hsl(268, 47%, 21%);
+  --key-shadow-third: hsl(290, 70%, 36%);
+  --key-hover-background: hsl(268, 53%, 50%);
+  --key-hover-background-secondary: hsl(290, 70%, 36%);
+  --key-hover-background-third: hsl(177, 92%, 70%);
+}
+
+.app {
+  margin: auto;
+  width: 375px;
+}
+
+.calculator {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--text);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-size: 2.3rem;
+}
+
+.theme-selector {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 35px;
+}
+
+.theme-selector__selector {
+  height: 18px;
+  width: 18px;
+  background-color: var(--selector-background);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s all ease;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.theme-selector__switch-body {
+  background-color: var(--switcher-background);
+  border-radius: 50px;
+  width: 80px;
+  height: 28px;
+  position: relative;
+}
+
+.theme-selector__switch-body.first .theme-selector__selector {
+  left: 15px;
+}
+
+.theme-selector__switch-body.second .theme-selector__selector {
+  left: 50%;
+}
+
+.theme-selector__switch-body.third .theme-selector__selector {
+  left: calc(100% - 15px);
+}
+
+.theme-selector__label {
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.theme-selector__selector:hover {
+  background-color: var(--selector-hover-background);
+}
+
+.theme-selector__switch-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 0.4rem;
+  align-items: center;
+}
+.theme-selector__switch-header div {
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.screen {
+  background-color: var(--screen-background);
+  border-radius: 8px;
+  padding: 1.8rem 2rem;
+  text-align: right;
+}
+
+.screen__input {
+  background-color: transparent;
+  border: transparent;
+  width: 100%;
+  color: var(--screen-color);
+  font-weight: 700;
+  font-size: 3rem;
+  user-select: none;
+}
+
+.keypad {
+  background-color: var(--keypad-background);
+  padding: 1.8rem 2rem;
+  border-radius: 8px;
+}
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 1rem;
+}
+.keypad-grid-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.keypad-item {
+  color: var(--key-color);
+  background-color: var(--key-background-third);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 6px 0px -3px var(--key-shadow-third);
+  -moz-box-shadow: 1px 6px 0px -3px var(--key-shadow-third);
+  box-shadow: 1px 6px 0px -3px var(--key-shadow-third);
+  transition: 0.1s all ease;
+  user-select: none;
+}
+
+.keypad-item.secondary {
+  background-color: var(--key-background);
+  color: #fff;
+  font-size: 1.2rem;
+  -webkit-box-shadow: 1px 6px 0px -3px var(--key-shadow);
+  -moz-box-shadow: 1px 6px 0px -3px var(--key-shadow);
+  box-shadow: 1px 6px 0px -3px var(--key-shadow);
+}
+
+.keypad-item:hover {
+  background-color: var(--key-hover-background);
+}
+.keypad-item.secondary:hover {
+  background-color: var(--key-hover-background-secondary);
+}
+.keypad-item.third:hover {
+  background-color: var(--key-hover-background-third);
+}
+
+.keypad-item.third {
+  background-color: var(--key-background-secondary);
+  color: #fff;
+  font-size: 1.2rem;
+  -webkit-box-shadow: 1px 6px 0px -3px var(--key-shadow-secondary);
+  -moz-box-shadow: 1px 6px 0px -3px var(--key-shadow-secondary);
+  box-shadow: 1px 6px 0px -3px var(--key-shadow-secondary);
+}

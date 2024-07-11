@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="first-theme">
+    <div class="app">
+      <div class="calculator">
+        <div class="header">
+          <div class="logo">calc</div>
+          <div class="theme-selector">
+            <label class="theme-selector__label" for="">theme</label>
+            <div class="theme-selector__switch">
+              <div class="theme-selector__switch-header">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+              </div>
+              <div class="theme-selector__switch-body first" id="switch-body">
+                <div class="theme-selector__selector" id="theme-selector"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen">
+          <span class="screen__input" id="screen-input">0</span>
+        </div>
+        <div class="keypad">
+          <div class="keypad-grid">
+            <div class="keypad-item" data-key="7">
+              <span>7</span>
+            </div>
+            <div class="keypad-item" data-key="8">
+              <span>8</span>
+            </div>
+            <div class="keypad-item" data-key="9">
+              <span>9</span>
+            </div>
+            <div class="keypad-item secondary" data-key="delete">
+              <span>DEL</span>
+            </div>
+            <div class="keypad-item" data-key="4">
+              <span>4</span>
+            </div>
+            <div class="keypad-item" data-key="5">
+              <span>5</span>
+            </div>
+            <div class="keypad-item" data-key="6">
+              <span>6</span>
+            </div>
+            <div class="keypad-item" data-key="+">
+              <span>+</span>
+            </div>
+            <div class="keypad-item" data-key="1">
+              <span>1</span>
+            </div>
+            <div class="keypad-item" data-key="2">
+              <span>2</span>
+            </div>
+            <div class="keypad-item" data-key="3">
+              <span>3</span>
+            </div>
+            <div class="keypad-item" data-key="-">
+              <span>-</span>
+            </div>
+            <div class="keypad-item" data-key=".">
+              <span>.</span>
+            </div>
+            <div class="keypad-item" data-key="0">
+              <span>0</span>
+            </div>
+            <div class="keypad-item" data-key="/">
+              <span>/</span>
+            </div>
+            <div class="keypad-item" data-key="*">
+              <span>x</span>
+            </div>
+          </div>
+          <div class="keypad-grid-bottom">
+            <div class="keypad-item secondary" data-key="reset">
+              <span>RESET</span>
+            </div>
+            <div class="keypad-item third" data-key="=">
+              <span>=</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
